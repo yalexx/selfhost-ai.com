@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Self-Hosted AI — Run Your Own AI Assistant Hardware</title>
+<meta name="description" content="Stop renting AI from the cloud. ClawBox is self-hosted AI hardware that runs on your desk — your data, your rules, one-time €549.">
+<meta name="keywords" content="self-hosted ai, self host ai assistant, private ai server, local ai hardware, self-hosted llm, run ai locally">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://selfhost-ai.com/">
+<meta property="og:title" content="Self-Hosted AI — Run Your Own AI Assistant Hardware">
+<meta property="og:description" content="Stop renting AI from the cloud. ClawBox is self-hosted AI hardware that runs on your desk — your data, your rules, one-time €549.">
+<meta property="og:url" content="https://selfhost-ai.com/">
+<meta property="og:image" content="https://openclawhardware.dev/clawbox-3.webp">
+<meta property="og:type" content="product">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Self-Hosted AI — Run Your Own AI Assistant Hardware">
+<meta name="twitter:description" content="Stop renting AI from the cloud. ClawBox is self-hosted AI hardware that runs on your desk — your data, your rules, one-time €549.">
+<meta name="twitter:image" content="https://openclawhardware.dev/clawbox-3.webp">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Product","name":"ClawBox","description":"Stop renting AI from the cloud. ClawBox is self-hosted AI hardware that runs on your desk — your data, your rules, one-time €549.","brand":{"@type":"Brand","name":"ClawBox"},"image":"https://openclawhardware.dev/clawbox-3.webp","url":"https://openclawhardware.dev/","offers":{"@type":"Offer","price":"549","priceCurrency":"EUR","availability":"https://schema.org/InStock"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why self-host AI?","acceptedAnswer":{"@type":"Answer","text":"Privacy, control, and cost. No monthly fees, no data leaving your network, no vendor lock-in. Self-hosted AI runs 24/7 for €0.80/month electricity."}},
+{"@type":"Question","name":"What AI models can I run?","acceptedAnswer":{"@type":"Answer","text":"Locally: Llama 3.1 8B, CodeLlama 7B, Hermes 3 8B, LLaVA 7B. Cloud APIs optional for bigger models. Best of both worlds."}},
+{"@type":"Question","name":"Is it difficult to maintain?","acceptedAnswer":{"@type":"Answer","text":"Zero maintenance. ClawBox is plug-and-play — no Docker, no terminal, no Linux expertise. Free software updates via web panel."}}]}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#0a0f1a;color:#e0e0e0;min-height:100vh;line-height:1.7}
+.hero{padding:60px 20px 80px;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.hero-text h1{font-size:clamp(2rem,4.5vw,3.2rem);color:#fff;font-weight:800;line-height:1.15;margin-bottom:16px}
+.hero-text h1 span{background:linear-gradient(135deg,#10b981,#34d399);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-text .subtitle{font-size:1.1rem;color:#9ca3af;margin-bottom:24px;line-height:1.6}
+.hero-cta{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:20px}
+.btn-primary{display:inline-block;padding:16px 32px;background:linear-gradient(135deg,#10b981,#34d399);color:#fff;text-decoration:none;border-radius:12px;font-size:1.1rem;font-weight:700;transition:transform .2s,box-shadow .2s}
+.btn-primary:hover{transform:scale(1.05);box-shadow:0 8px 30px #10b98144}
+.btn-secondary{display:inline-block;padding:16px 32px;color:#34d399;text-decoration:none;border:1px solid #10b98144;border-radius:12px;font-size:1rem;font-weight:600;transition:all .2s}
+.btn-secondary:hover{background:#10b98111}
+.hero-micro{font-size:.85rem;color:#6b7280}
+.hero-micro span{color:#22c55e;font-weight:600}
+.hero-image{text-align:center}
+.hero-image img{max-width:100%;height:auto;border-radius:16px;filter:drop-shadow(0 20px 40px rgba(0,0,0,0.4))}
+.trust-bar{background:#121a2e;border-top:1px solid #10b98122;border-bottom:1px solid #10b98122;padding:16px 20px;text-align:center}
+.trust-bar .items{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;font-size:.85rem;color:#9ca3af}
+.section{max-width:1000px;margin:0 auto;padding:80px 20px}
+.section-title{font-size:clamp(1.5rem,3vw,2.2rem);color:#fff;font-weight:800;margin-bottom:12px;text-align:center}
+.section-sub{color:#9ca3af;font-size:1.05rem;margin-bottom:40px;text-align:center;max-width:640px;margin-left:auto;margin-right:auto}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.feature{background:#121a2e;border-radius:14px;padding:28px;border:1px solid #10b98122;transition:border-color .2s}
+.feature:hover{border-color:#10b98155}
+.feature .icon{font-size:1.8rem;margin-bottom:12px}
+.feature h3{color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px}
+.feature p{color:#9ca3af;font-size:.9rem;line-height:1.6}
+.proof{background:#121a2e;border-radius:16px;padding:48px 32px;border:1px solid #10b98122}
+.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-bottom:32px}
+.review{background:#0a0f1a;border-radius:12px;padding:24px;border:1px solid rgba(255,255,255,0.05)}
+.review .stars{color:#34d399;margin-bottom:8px;font-size:1.1rem}
+.review p{color:#d1d5db;font-size:.95rem;font-style:italic;margin-bottom:12px;line-height:1.6}
+.review cite{color:#6b7280;font-size:.85rem;font-style:normal}
+.faqs{max-width:700px;margin:0 auto}
+.faq{background:#121a2e;border-radius:12px;padding:24px;margin-bottom:12px;border:1px solid #10b98122}
+.faq h3{color:#fff;font-size:1rem;font-weight:700;margin-bottom:8px}
+.faq p{color:#9ca3af;font-size:.9rem;line-height:1.6}
+.cta-box{text-align:center;background:linear-gradient(135deg,#10b98122,#34d39911);border:1px solid #10b98133;border-radius:20px;padding:48px 32px;margin:40px auto;max-width:600px}
+.cta-box h2{color:#fff;font-size:1.8rem;font-weight:800;margin-bottom:12px}
+.cta-box p{color:#9ca3af;margin-bottom:24px}
+.cta-box .price{font-size:2rem;color:#fff;font-weight:800;margin-bottom:8px}
+.cta-box .price-sub{font-size:.85rem;color:#6b7280;margin-bottom:24px}
+footer{text-align:center;padding:40px 20px;color:#6b7280;font-size:.8rem;border-top:1px solid rgba(255,255,255,0.05)}
+footer a{color:#34d399;text-decoration:none}
+@media(max-width:768px){.hero{grid-template-columns:1fr;text-align:center}.hero-cta{justify-content:center}.hero-image{order:-1}}
+</style>
+</head>
+<body>
+<section class="hero">
+<div class="hero-text">
+<h1>Self-Host Your <span>AI Assistant</span></h1>
+<p class="subtitle">Stop renting AI from the cloud. ClawBox is self-hosted AI hardware that runs on your desk — your data, your rules, one-time €549.</p>
+<div class="hero-cta">
+<a href="https://openclawhardware.dev" class="btn-primary">Buy ClawBox — €549</a>
+<a href="https://openclawhardware.dev/faq" class="btn-secondary">Learn More</a>
+</div>
+<p class="hero-micro"><span>✓ 30-day money-back guarantee</span> · Free shipping available · No subscriptions</p>
+</div>
+<div class="hero-image">
+<img src="https://openclawhardware.dev/clawbox-3.webp" alt="ClawBox AI Hardware Device" width="500" height="400" loading="eager">
+</div>
+</section>
+<div class="trust-bar"><div class="items"><span>⚡ 67 TOPS AI</span><span>💾 512GB NVMe</span><span>🔌 20W Power</span><span>🛡️ Carbon Fiber</span><span>💰 €549 One-Time</span></div></div>
+<section class="section">
+<h2 class="section-title">Why ClawBox?</h2>
+<p class="section-sub">Everything you need for private, always-on AI — in one beautiful box.</p>
+<div class="features"><div class="feature"><div class="icon">🔒</div><h3>Your Data Stays Home</h3><p>Every conversation, file, and automation runs locally. Cloud APIs are opt-in — you choose what leaves the device.</p></div>
+<div class="feature"><div class="icon">💰</div><h3>No Subscriptions Ever</h3><p>€549 one-time. Compare: ChatGPT Plus costs €240/yr, cloud VPS €240-600/yr. ClawBox pays for itself in months.</p></div>
+<div class="feature"><div class="icon">🧠</div><h3>Run LLMs Locally</h3><p>Llama 3.1 8B at ~15 tok/s. Good for conversations, coding, summaries. Cloud APIs for complex reasoning.</p></div>
+<div class="feature"><div class="icon">🔧</div><h3>Full Root Access</h3><p>It's your hardware. SSH in, install packages, run Docker containers. Ubuntu Linux underneath.</p></div>
+<div class="feature"><div class="icon">📡</div><h3>Works Offline</h3><p>Local AI models work without internet. Perfect for privacy-sensitive or air-gapped environments.</p></div>
+<div class="feature"><div class="icon">🔄</div><h3>Open Source Software</h3><p>OpenClaw is MIT-licensed. No lock-in, no kill switch. Community-driven development.</p></div></div>
+</section>
+<section class="section">
+<div class="proof">
+<h2 class="section-title" style="margin-bottom:32px">What Customers Say</h2>
+<div class="reviews"><div class="review"><div class="stars">★★★★★</div><p>"Best tech purchase I've made in years. The AI runs 24/7 and barely uses any power."</p><cite>— Marco P., Italy</cite></div>
+<div class="review"><div class="stars">★★★★★</div><p>"Setup was genuinely 5 minutes. Now it manages my emails and smart home. Incredible."</p><cite>— Sarah K., Germany</cite></div>
+<div class="review"><div class="stars">★★★★★</div><p>"Finally, private AI that actually works. No more sending my data to the cloud."</p><cite>— James L., UK</cite></div></div>
+</div>
+</section>
+<section class="section">
+<h2 class="section-title">Frequently Asked Questions</h2>
+<p class="section-sub">Got questions? We've got answers.</p>
+<div class="faqs"><div class="faq"><h3>Why self-host AI?</h3><p>Privacy, control, and cost. No monthly fees, no data leaving your network, no vendor lock-in. Self-hosted AI runs 24/7 for €0.80/month electricity.</p></div>
+<div class="faq"><h3>What AI models can I run?</h3><p>Locally: Llama 3.1 8B, CodeLlama 7B, Hermes 3 8B, LLaVA 7B. Cloud APIs optional for bigger models. Best of both worlds.</p></div>
+<div class="faq"><h3>Is it difficult to maintain?</h3><p>Zero maintenance. ClawBox is plug-and-play — no Docker, no terminal, no Linux expertise. Free software updates via web panel.</p></div></div>
+</section>
+<section class="section">
+<div class="cta-box">
+<h2>Ready to Own Your AI?</h2>
+<div class="price">€549</div>
+<p class="price-sub">One-time purchase · No subscriptions · 30-day money-back guarantee</p>
+<a href="https://openclawhardware.dev" class="btn-primary">Order ClawBox Now</a>
+<p style="margin-top:16px;font-size:.85rem;color:#6b7280">Ships from EU via DHL Express · Worldwide delivery</p>
+</div>
+</section>
+<footer>
+<p>ClawBox by <a href="https://openclawhardware.dev">OpenClaw Hardware</a> · NVIDIA Jetson Orin Nano · Made with ❤️ in Bulgaria</p>
+<p style="margin-top:8px"><a href="https://openclawhardware.dev/faq">FAQ</a> · <a href="https://openclawhardware.dev/shipping">Shipping</a> · <a href="https://discord.gg/FbKmnxYnpq">Discord</a> · <a href="mailto:yanko@idrobots.com">Contact</a></p>
+</footer>
+</body>
+</html>
