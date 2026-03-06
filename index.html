@@ -3,129 +3,237 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Self-Hosted AI — Run Your Own AI Assistant Hardware</title>
-<meta name="description" content="Stop renting AI from the cloud. ClawBox is self-hosted AI hardware that runs on your desk — your data, your rules, one-time €549.">
-<meta name="keywords" content="self-hosted ai, self host ai assistant, private ai server, local ai hardware, self-hosted llm, run ai locally">
-<meta name="robots" content="index, follow">
+<title>SelfHost AI — Run AI on Your Own Hardware</title>
+<meta name="description" content="In-depth guides, comparisons, and tutorials for self-hosting AI models at home. Save money, protect privacy, and take control of your AI stack.">
+<meta name="keywords" content="self hosted AI, run LLM at home, local AI models, privacy AI, self hosting guide">
 <link rel="canonical" href="https://selfhost-ai.com/">
-<meta property="og:title" content="Self-Hosted AI — Run Your Own AI Assistant Hardware">
-<meta property="og:description" content="Stop renting AI from the cloud. ClawBox is self-hosted AI hardware that runs on your desk — your data, your rules, one-time €549.">
+<meta property="og:title" content="SelfHost AI — Run AI on Your Own Hardware">
+<meta property="og:description" content="Practical guides to self-hosting AI models at home. Privacy-first, cost-effective, and genuinely useful.">
 <meta property="og:url" content="https://selfhost-ai.com/">
-<meta property="og:image" content="https://openclawhardware.dev/clawbox-3.webp">
-<meta property="og:type" content="product">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://selfhost-ai.com/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Self-Hosted AI — Run Your Own AI Assistant Hardware">
-<meta name="twitter:description" content="Stop renting AI from the cloud. ClawBox is self-hosted AI hardware that runs on your desk — your data, your rules, one-time €549.">
-<meta name="twitter:image" content="https://openclawhardware.dev/clawbox-3.webp">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Product","name":"ClawBox","description":"Stop renting AI from the cloud. ClawBox is self-hosted AI hardware that runs on your desk — your data, your rules, one-time €549.","brand":{"@type":"Brand","name":"ClawBox"},"image":"https://openclawhardware.dev/clawbox-3.webp","url":"https://openclawhardware.dev/","offers":{"@type":"Offer","price":"549","priceCurrency":"EUR","availability":"https://schema.org/InStock"}}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why self-host AI?","acceptedAnswer":{"@type":"Answer","text":"Privacy, control, and cost. No monthly fees, no data leaving your network, no vendor lock-in. Self-hosted AI runs 24/7 for €0.80/month electricity."}},
-{"@type":"Question","name":"What AI models can I run?","acceptedAnswer":{"@type":"Answer","text":"Locally: Llama 3.1 8B, CodeLlama 7B, Hermes 3 8B, LLaVA 7B. Cloud APIs optional for bigger models. Best of both worlds."}},
-{"@type":"Question","name":"Is it difficult to maintain?","acceptedAnswer":{"@type":"Answer","text":"Zero maintenance. ClawBox is plug-and-play — no Docker, no terminal, no Linux expertise. Free software updates via web panel."}}]}
-</script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta name="twitter:title" content="SelfHost AI — Run AI on Your Own Hardware">
+<meta name="twitter:description" content="Practical guides to self-hosting AI models at home.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',sans-serif;background:#0a0f1a;color:#e0e0e0;min-height:100vh;line-height:1.7}
-.hero{padding:60px 20px 80px;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.hero-text h1{font-size:clamp(2rem,4.5vw,3.2rem);color:#fff;font-weight:800;line-height:1.15;margin-bottom:16px}
-.hero-text h1 span{background:linear-gradient(135deg,#10b981,#34d399);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-text .subtitle{font-size:1.1rem;color:#9ca3af;margin-bottom:24px;line-height:1.6}
-.hero-cta{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:20px}
-.btn-primary{display:inline-block;padding:16px 32px;background:linear-gradient(135deg,#10b981,#34d399);color:#fff;text-decoration:none;border-radius:12px;font-size:1.1rem;font-weight:700;transition:transform .2s,box-shadow .2s}
-.btn-primary:hover{transform:scale(1.05);box-shadow:0 8px 30px #10b98144}
-.btn-secondary{display:inline-block;padding:16px 32px;color:#34d399;text-decoration:none;border:1px solid #10b98144;border-radius:12px;font-size:1rem;font-weight:600;transition:all .2s}
-.btn-secondary:hover{background:#10b98111}
-.hero-micro{font-size:.85rem;color:#6b7280}
-.hero-micro span{color:#22c55e;font-weight:600}
-.hero-image{text-align:center}
-.hero-image img{max-width:100%;height:auto;border-radius:16px;filter:drop-shadow(0 20px 40px rgba(0,0,0,0.4))}
-.trust-bar{background:#121a2e;border-top:1px solid #10b98122;border-bottom:1px solid #10b98122;padding:16px 20px;text-align:center}
-.trust-bar .items{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;font-size:.85rem;color:#9ca3af}
-.section{max-width:1000px;margin:0 auto;padding:80px 20px}
-.section-title{font-size:clamp(1.5rem,3vw,2.2rem);color:#fff;font-weight:800;margin-bottom:12px;text-align:center}
-.section-sub{color:#9ca3af;font-size:1.05rem;margin-bottom:40px;text-align:center;max-width:640px;margin-left:auto;margin-right:auto}
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-.feature{background:#121a2e;border-radius:14px;padding:28px;border:1px solid #10b98122;transition:border-color .2s}
-.feature:hover{border-color:#10b98155}
-.feature .icon{font-size:1.8rem;margin-bottom:12px}
-.feature h3{color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px}
-.feature p{color:#9ca3af;font-size:.9rem;line-height:1.6}
-.proof{background:#121a2e;border-radius:16px;padding:48px 32px;border:1px solid #10b98122}
-.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-bottom:32px}
-.review{background:#0a0f1a;border-radius:12px;padding:24px;border:1px solid rgba(255,255,255,0.05)}
-.review .stars{color:#34d399;margin-bottom:8px;font-size:1.1rem}
-.review p{color:#d1d5db;font-size:.95rem;font-style:italic;margin-bottom:12px;line-height:1.6}
-.review cite{color:#6b7280;font-size:.85rem;font-style:normal}
-.faqs{max-width:700px;margin:0 auto}
-.faq{background:#121a2e;border-radius:12px;padding:24px;margin-bottom:12px;border:1px solid #10b98122}
-.faq h3{color:#fff;font-size:1rem;font-weight:700;margin-bottom:8px}
-.faq p{color:#9ca3af;font-size:.9rem;line-height:1.6}
-.cta-box{text-align:center;background:linear-gradient(135deg,#10b98122,#34d39911);border:1px solid #10b98133;border-radius:20px;padding:48px 32px;margin:40px auto;max-width:600px}
-.cta-box h2{color:#fff;font-size:1.8rem;font-weight:800;margin-bottom:12px}
-.cta-box p{color:#9ca3af;margin-bottom:24px}
-.cta-box .price{font-size:2rem;color:#fff;font-weight:800;margin-bottom:8px}
-.cta-box .price-sub{font-size:.85rem;color:#6b7280;margin-bottom:24px}
-footer{text-align:center;padding:40px 20px;color:#6b7280;font-size:.8rem;border-top:1px solid rgba(255,255,255,0.05)}
-footer a{color:#34d399;text-decoration:none}
-@media(max-width:768px){.hero{grid-template-columns:1fr;text-align:center}.hero-cta{justify-content:center}.hero-image{order:-1}}
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--accent:#10b981;--accent-dim:#059669;--bg:#0a0f1a;--bg2:#111827;--bg3:#1f2937;--text:#f1f5f9;--muted:#94a3b8;--border:#1e293b;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none;}a:hover{text-decoration:underline;}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.logo{font-size:1.3rem;font-weight:800;color:var(--accent);}
+nav a{margin-left:1.5rem;color:var(--muted);font-size:.9rem;}nav a:hover{color:var(--text);}
+.hero{background:linear-gradient(135deg,#0a0f1a 0%,#0d2818 100%);padding:5rem 2rem;text-align:center;border-bottom:1px solid var(--border);}
+.hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;line-height:1.2;margin-bottom:1rem;}
+.hero h1 span{color:var(--accent);}
+.hero p{font-size:1.1rem;color:var(--muted);max-width:600px;margin:0 auto 2rem;}
+.badge{display:inline-block;background:rgba(16,185,129,.15);color:var(--accent);padding:.3rem .8rem;border-radius:99px;font-size:.8rem;font-weight:600;margin-bottom:1rem;border:1px solid rgba(16,185,129,.3);}
+.container{max-width:1200px;margin:0 auto;padding:3rem 2rem;}
+.grid{display:grid;grid-template-columns:1fr 320px;gap:2rem;}
+@media(max-width:768px){.grid{grid-template-columns:1fr;}}
+.articles-section h2{font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;color:var(--text);}
+.article-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;transition:border-color .2s;}
+.article-card:hover{border-color:var(--accent);}
+.article-card .tag{font-size:.75rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.5rem;}
+.article-card h3{font-size:1.15rem;font-weight:700;margin-bottom:.5rem;}
+.article-card p{color:var(--muted);font-size:.9rem;}
+.article-card .meta{font-size:.8rem;color:var(--muted);margin-top:.8rem;}
+.featured{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:2rem;margin-bottom:2rem;}
+.featured .label{font-size:.75rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem;}
+.featured h2{font-size:1.6rem;font-weight:800;margin-bottom:.5rem;}
+.featured .meta{color:var(--muted);font-size:.85rem;margin-bottom:1.5rem;}
+.featured-body h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .5rem;color:var(--accent);}
+.featured-body p{color:#cbd5e1;margin-bottom:1rem;font-size:.95rem;}
+.featured-body ul{color:#cbd5e1;font-size:.95rem;padding-left:1.5rem;margin-bottom:1rem;}
+.featured-body li{margin-bottom:.3rem;}
+.sidebar-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;}
+.sidebar-card h3{font-size:1rem;font-weight:700;margin-bottom:1rem;color:var(--text);}
+.hw-item{display:flex;flex-direction:column;gap:.3rem;padding:.8rem 0;border-bottom:1px solid var(--border);}
+.hw-item:last-child{border-bottom:none;}
+.hw-item .hw-name{font-weight:600;font-size:.9rem;}
+.hw-item .hw-desc{font-size:.8rem;color:var(--muted);}
+.hw-item .hw-price{font-size:.85rem;color:var(--accent);font-weight:600;}
+.faq-section{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:2rem;margin-top:2rem;}
+.faq-section h2{font-size:1.3rem;font-weight:700;margin-bottom:1.5rem;}
+.faq-item{margin-bottom:1.5rem;}
+.faq-item h3{font-size:1rem;font-weight:600;margin-bottom:.5rem;color:var(--accent);}
+.faq-item p{font-size:.9rem;color:var(--muted);}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--muted);font-size:.85rem;}
 </style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"Blog",
+      "name":"SelfHost AI",
+      "url":"https://selfhost-ai.com",
+      "description":"Practical guides to self-hosting AI at home",
+      "publisher":{"@type":"Organization","name":"SelfHost AI"}
+    },
+    {
+      "@type":"BlogPosting",
+      "headline":"Top 5 Self-Hosted AI Tools in 2026",
+      "url":"https://selfhost-ai.com/#top5",
+      "datePublished":"2026-01-15",
+      "author":{"@type":"Person","name":"SelfHost AI Team"},
+      "publisher":{"@type":"Organization","name":"SelfHost AI"},
+      "description":"A curated list of the best self-hosted AI tools you can run on your own hardware in 2026."
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"Can I run AI models without a GPU?","acceptedAnswer":{"@type":"Answer","text":"Yes — many 7B models run on CPU with 16GB RAM, though inference is slower (2-5 tok/s vs 15+ tok/s on GPU/NPU hardware). For 24/7 use, dedicated hardware with neural processing is recommended."}},
+        {"@type":"Question","name":"How much storage do AI models need?","acceptedAnswer":{"@type":"Answer","text":"Quantized 7B models (Q4 format) require about 4-5GB. The full-precision 70B models need 40GB+. For a home server, 512GB NVMe gives you comfortable room to store and switch between multiple models."}},
+        {"@type":"Question","name":"Is self-hosting AI legal?","acceptedAnswer":{"@type":"Answer","text":"Yes — running open-source models like Llama, Mistral, or Phi-3 on your own hardware is completely legal. Check each model's license for commercial use restrictions."}}
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
+<header>
+  <div class="logo">⚡ SelfHost AI</div>
+  <nav>
+    <a href="#articles">Articles</a>
+    <a href="#hardware">Hardware</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+</header>
+
 <section class="hero">
-<div class="hero-text">
-<h1>Self-Host Your <span>AI Assistant</span></h1>
-<p class="subtitle">Stop renting AI from the cloud. ClawBox is self-hosted AI hardware that runs on your desk — your data, your rules, one-time €549.</p>
-<div class="hero-cta">
-<a href="https://openclawhardware.dev" class="btn-primary">Buy ClawBox — €549</a>
-<a href="https://openclawhardware.dev/faq" class="btn-secondary">Learn More</a>
-</div>
-<p class="hero-micro"><span>✓ 30-day money-back guarantee</span> · Free shipping available · No subscriptions</p>
-</div>
-<div class="hero-image">
-<img src="https://openclawhardware.dev/clawbox-3.webp" alt="ClawBox AI Hardware Device" width="500" height="400" loading="eager">
-</div>
+  <div class="badge">2026 Edition</div>
+  <h1>Run <span>AI on Your Own</span><br>Hardware</h1>
+  <p>No subscriptions. No data leaks. No vendor lock-in. Practical guides to self-hosting AI models that actually work.</p>
 </section>
-<div class="trust-bar"><div class="items"><span>⚡ 67 TOPS AI</span><span>💾 512GB NVMe</span><span>🔌 20W Power</span><span>🛡️ Carbon Fiber</span><span>💰 €549 One-Time</span></div></div>
-<section class="section">
-<h2 class="section-title">Why ClawBox?</h2>
-<p class="section-sub">Everything you need for private, always-on AI — in one beautiful box.</p>
-<div class="features"><div class="feature"><div class="icon">🔒</div><h3>Your Data Stays Home</h3><p>Every conversation, file, and automation runs locally. Cloud APIs are opt-in — you choose what leaves the device.</p></div>
-<div class="feature"><div class="icon">💰</div><h3>No Subscriptions Ever</h3><p>€549 one-time. Compare: ChatGPT Plus costs €240/yr, cloud VPS €240-600/yr. ClawBox pays for itself in months.</p></div>
-<div class="feature"><div class="icon">🧠</div><h3>Run LLMs Locally</h3><p>Llama 3.1 8B at ~15 tok/s. Good for conversations, coding, summaries. Cloud APIs for complex reasoning.</p></div>
-<div class="feature"><div class="icon">🔧</div><h3>Full Root Access</h3><p>It's your hardware. SSH in, install packages, run Docker containers. Ubuntu Linux underneath.</p></div>
-<div class="feature"><div class="icon">📡</div><h3>Works Offline</h3><p>Local AI models work without internet. Perfect for privacy-sensitive or air-gapped environments.</p></div>
-<div class="feature"><div class="icon">🔄</div><h3>Open Source Software</h3><p>OpenClaw is MIT-licensed. No lock-in, no kill switch. Community-driven development.</p></div></div>
-</section>
-<section class="section">
-<div class="proof">
-<h2 class="section-title" style="margin-bottom:32px">What Customers Say</h2>
-<div class="reviews"><div class="review"><div class="stars">★★★★★</div><p>"Best tech purchase I've made in years. The AI runs 24/7 and barely uses any power."</p><cite>— Marco P., Italy</cite></div>
-<div class="review"><div class="stars">★★★★★</div><p>"Setup was genuinely 5 minutes. Now it manages my emails and smart home. Incredible."</p><cite>— Sarah K., Germany</cite></div>
-<div class="review"><div class="stars">★★★★★</div><p>"Finally, private AI that actually works. No more sending my data to the cloud."</p><cite>— James L., UK</cite></div></div>
+
+<div class="container">
+  <div class="grid">
+    <main>
+      <!-- Featured Article -->
+      <div class="featured">
+        <div class="label">📌 Featured Article</div>
+        <h2>Top 5 Self-Hosted AI Tools in 2026</h2>
+        <div class="meta">January 15, 2026 · 8 min read · Self-Hosting Guides</div>
+        <div class="featured-body">
+          <p>The self-hosted AI landscape has matured dramatically. What once required a PhD and a server rack can now run on a $150 mini PC or a purpose-built AI appliance. Here are the five tools worth your time in 2026 — tested, compared, and honestly reviewed.</p>
+
+          <h3>1. Ollama — The Easiest Way to Run LLMs Locally</h3>
+          <p>Ollama has become the de facto standard for running large language models locally. With a single command you can pull and run Llama 3.1, Mistral, Phi-3, or Gemma. It handles model quantization, GPU/CPU memory management, and exposes a clean REST API that works with most frontends.</p>
+          <p>Best for: developers who want a low-friction local LLM server. The OpenAI-compatible API means you can swap it in for anything that talks to ChatGPT — including Open WebUI, Obsidian plugins, and custom scripts.</p>
+
+          <h3>2. Open WebUI — ChatGPT-Style Interface for Your Models</h3>
+          <p>If Ollama is the engine, Open WebUI is the dashboard. It provides a polished chat interface with conversation history, model switching, and even image generation support. Installation via Docker takes about 5 minutes. The project has seen massive growth — over 40,000 GitHub stars — and the community ships new features weekly.</p>
+          <p>Key features: RAG (retrieval-augmented generation) for chatting with your documents, multi-user support, and voice input/output. If you're setting up AI for a small team or family, this is the tool to start with.</p>
+
+          <h3>3. LocalAI — Run Any Model, Any Format</h3>
+          <p>LocalAI is the Swiss Army knife of self-hosted AI. It supports GGUF, GPTQ, AWQ, and other model formats, and handles not just text but also image generation, audio transcription, and embeddings — all behind an OpenAI-compatible API. Useful when you need a single inference server for mixed AI tasks.</p>
+
+          <h3>4. Home Assistant + Ollama Integration</h3>
+          <p>Home Assistant's AI integration has quietly become one of the best reasons to self-host AI. Connect a local Ollama instance and you get a privacy-respecting voice assistant that controls your smart home without sending commands to Google or Amazon. All processing happens on your network.</p>
+
+          <h3>5. Whisper.cpp — Fast, Private Speech Recognition</h3>
+          <p>OpenAI's Whisper model, reimplemented in C++ for speed. Whisper.cpp runs real-time transcription on modest hardware — even a Raspberry Pi 5 can handle shorter audio. Pair it with Piper TTS for a fully local voice pipeline that understands 90+ languages. Devices like ClawBox ship with Whisper pre-installed and configured, which is worth considering if you don't want to handle that setup yourself.</p>
+
+          <h3>What Hardware Do You Need?</h3>
+          <p>The minimum viable self-hosted AI setup in 2026:</p>
+          <ul>
+            <li><strong>CPU inference (budget):</strong> Any modern x86 PC with 16GB RAM — runs 7B models at 2-5 tok/s</li>
+            <li><strong>GPU acceleration:</strong> NVIDIA RTX 3060 or better — runs 7B at 50+ tok/s</li>
+            <li><strong>ARM/NPU (efficient):</strong> NVIDIA Jetson Orin or Apple M-series — 15-30 tok/s at 20W</li>
+            <li><strong>Storage:</strong> 512GB NVMe minimum to store 3-4 quantized models comfortably</li>
+          </ul>
+          <p>The sweet spot for most people is an always-on, low-power device that doesn't spike your electricity bill. A 20W AI appliance costs roughly €0.80/month to run 24/7 — vs €30-50/month on API subscriptions for moderate usage.</p>
+
+          <h3>Getting Started Today</h3>
+          <p>Install Ollama, pull Llama 3.1 8B, and point Open WebUI at it. That's your weekend project. Once you've tasted local AI, you won't want to go back to sending everything to a cloud provider.</p>
+        </div>
+      </div>
+
+      <!-- Article Cards -->
+      <div id="articles">
+        <h2>More Articles</h2>
+        <div class="article-card">
+          <div class="tag">Cost Analysis</div>
+          <h3>Self-Hosted vs Cloud AI: Real Cost Comparison for 2026</h3>
+          <p>We ran the numbers. Cloud AI APIs cost €20-80/month for moderate usage. A self-hosted setup pays for itself in 6-12 months — and you own it forever. Here's the detailed breakdown by use case: personal assistant, coding helper, document processing, and voice AI.</p>
+          <div class="meta">February 3, 2026 · 6 min read</div>
+        </div>
+        <div class="article-card">
+          <div class="tag">Tutorial</div>
+          <h3>How to Run LLMs at Home: A Complete Beginner's Guide</h3>
+          <p>From zero to running Llama 3.1 locally in under an hour. We cover hardware requirements, software installation (Ollama + Open WebUI), model selection, and performance tuning. Includes troubleshooting for the most common issues.</p>
+          <div class="meta">January 28, 2026 · 12 min read</div>
+        </div>
+        <div class="article-card">
+          <div class="tag">Privacy</div>
+          <h3>Privacy Benefits of Local AI: What the Cloud Actually Sees</h3>
+          <p>Every query you send to ChatGPT, Gemini, or Claude is logged, potentially used for training, and subject to legal requests. Local AI changes the equation entirely. We examine what data cloud providers collect, what local alternatives protect, and when it actually matters.</p>
+          <div class="meta">January 20, 2026 · 7 min read</div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="faq-section" id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <h3>Can I run AI models without a GPU?</h3>
+          <p>Yes — many 7B models run on CPU with 16GB RAM, though inference is slower (2-5 tok/s vs 15+ tok/s on GPU/NPU hardware). For 24/7 use, dedicated hardware with neural processing is recommended.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How much storage do AI models need?</h3>
+          <p>Quantized 7B models (Q4 format) require about 4-5GB. Full-precision 70B models need 40GB+. For a home server, 512GB NVMe gives you comfortable room to store and switch between multiple models.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is self-hosting AI legal?</h3>
+          <p>Yes — running open-source models like Llama, Mistral, or Phi-3 on your own hardware is completely legal. Check each model's license for commercial use restrictions.</p>
+        </div>
+      </div>
+    </main>
+
+    <aside id="hardware">
+      <div class="sidebar-card">
+        <h3>🖥️ Recommended Hardware</h3>
+        <div class="hw-item">
+          <span class="hw-name">ClawBox</span>
+          <span class="hw-desc">NVIDIA Jetson Orin Nano Super, 67 TOPS, 512GB NVMe, carbon fiber case. Plug-and-play AI appliance with OpenClaw pre-installed.</span>
+          <span class="hw-price">€549 — openclawhardware.dev</span>
+        </div>
+        <div class="hw-item">
+          <span class="hw-name">NVIDIA Jetson Orin NX</span>
+          <span class="hw-desc">16GB model, 100 TOPS — for projects needing more GPU headroom</span>
+          <span class="hw-price">~€650 (module only)</span>
+        </div>
+        <div class="hw-item">
+          <span class="hw-name">Intel NUC 13 Pro</span>
+          <span class="hw-desc">x86, 32-64GB RAM, runs quantized 70B models on CPU</span>
+          <span class="hw-price">€350-600</span>
+        </div>
+        <div class="hw-item">
+          <span class="hw-name">Raspberry Pi 5 (8GB)</span>
+          <span class="hw-desc">Budget pick — runs 3B models fine, 7B slowly. Great for Whisper STT.</span>
+          <span class="hw-price">~€80</span>
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <h3>📚 Quick Links</h3>
+        <p style="font-size:.85rem;color:var(--muted);line-height:2;">
+          <a href="https://ollama.com">Ollama</a><br>
+          <a href="https://github.com/open-webui/open-webui">Open WebUI</a><br>
+          <a href="https://github.com/mudler/LocalAI">LocalAI</a><br>
+          <a href="https://huggingface.co/models">HuggingFace Models</a><br>
+          <a href="https://github.com/ggerganov/llama.cpp">llama.cpp</a>
+        </p>
+      </div>
+    </aside>
+  </div>
 </div>
-</section>
-<section class="section">
-<h2 class="section-title">Frequently Asked Questions</h2>
-<p class="section-sub">Got questions? We've got answers.</p>
-<div class="faqs"><div class="faq"><h3>Why self-host AI?</h3><p>Privacy, control, and cost. No monthly fees, no data leaving your network, no vendor lock-in. Self-hosted AI runs 24/7 for €0.80/month electricity.</p></div>
-<div class="faq"><h3>What AI models can I run?</h3><p>Locally: Llama 3.1 8B, CodeLlama 7B, Hermes 3 8B, LLaVA 7B. Cloud APIs optional for bigger models. Best of both worlds.</p></div>
-<div class="faq"><h3>Is it difficult to maintain?</h3><p>Zero maintenance. ClawBox is plug-and-play — no Docker, no terminal, no Linux expertise. Free software updates via web panel.</p></div></div>
-</section>
-<section class="section">
-<div class="cta-box">
-<h2>Ready to Own Your AI?</h2>
-<div class="price">€549</div>
-<p class="price-sub">One-time purchase · No subscriptions · 30-day money-back guarantee</p>
-<a href="https://openclawhardware.dev" class="btn-primary">Order ClawBox Now</a>
-<p style="margin-top:16px;font-size:.85rem;color:#6b7280">Ships from EU via DHL Express · Worldwide delivery</p>
-</div>
-</section>
+
 <footer>
-<p>ClawBox by <a href="https://openclawhardware.dev">OpenClaw Hardware</a> · NVIDIA Jetson Orin Nano · Made with ❤️ in Bulgaria</p>
-<p style="margin-top:8px"><a href="https://openclawhardware.dev/faq">FAQ</a> · <a href="https://openclawhardware.dev/shipping">Shipping</a> · <a href="https://discord.gg/FbKmnxYnpq">Discord</a> · <a href="mailto:yanko@idrobots.com">Contact</a></p>
+  <p>© 2026 SelfHost AI · Practical guides for running AI on your own hardware · <a href="mailto:hello@selfhost-ai.com">Contact</a></p>
 </footer>
 </body>
 </html>
