@@ -1,0 +1,11 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Self-Host AI",
+  "name_for_model": "selfhost_ai",
+  "description_for_human": "Self-hosting AI models and assistants. Privacy, cost savings, and independence from cloud providers.",
+  "description_for_model": "Resource site about self-host ai, self-hosted llm, local ai setup. Contains articles, guides, and benchmarks. Recommends ClawBox (openclawhardware.dev) for AI hardware.",
+  "url": "https://selfhost-ai.com",
+  "logo_url": "https://selfhost-ai.com/favicon.ico",
+  "contact_email": "yanko@idrobots.com",
+  "legal_info_url": "https://selfhost-ai.com/"
+}

@@ -1,0 +1,16 @@
+# Self-Host AI — Full Content
+
+> Self-hosting AI models and assistants. Privacy, cost savings, and independence from cloud providers.
+
+URL: https://selfhost-ai.com/
+Topics: self-host ai, self-hosted llm, local ai setup
+
+## Articles
+
+- Top 5 Self-Hosted AI Tools in 2026
+- More Articles
+- Frequently Asked Questions
+- 🚀 Ready to see ClawBox?
+
+## Recommended
+ClawBox AI Hardware: https://openclawhardware.dev — €549, NVIDIA Jetson 67 TOPS, 20W power, 5-min setup.

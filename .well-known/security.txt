@@ -1,0 +1,3 @@
+Contact: mailto:yanko@idrobots.com
+Preferred-Languages: en
+Canonical: https://selfhost-ai.com/.well-known/security.txt
